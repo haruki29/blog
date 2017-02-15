@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'aboutme/index'
+
+  get 'picture/index'
+
+  get 'works/index'
+
+  get 'bloglist/index'
+
   get 'login/login'
 
   #get 'blog/index'

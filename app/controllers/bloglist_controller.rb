@@ -1,7 +1,5 @@
-class BlogController < ApplicationController
+class BloglistController < ApplicationController
   def index
     @title = Rails.application.config.blog['site']['title']
-    
-    @blogs = Blog.all
   end
 end
