@@ -1,4 +1,21 @@
-<h1>Login#login</h1>
-<p>Find me in app/views/login/login.html.erb</p>
-
-<%= @title%>
+<% if flash[:notice] %>
+	<%= render :partial => 'layouts/flash_notice'%>
+<% end %>
+<div id='login'>
+	<div id='login-title'>
+		登录博客
+	</div>
+<%= form_for @user, :method => 'post', url: {action:'login'} do |f|%>
+	<div id='login-box'>
+		<%= f.label '登录名', :class => 'login-box-title'%>
+		<%= f.text_field :name, :class => 'login-box-field'%>
+	</div>
+	<div id='login-box'>
+		<%= f.label '密码', :class => 'login-box-title'%>
+		<%= f.text_field :hash_pwd, :class => 'login-box-field'%>
+	</div>
+	<div id='login-box'>
+		<%= f.submit '登录', :id => 'login-box-submit'%>
+	</div>
+<% end %>
+</div>

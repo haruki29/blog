@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/admin'
+
   get 'aboutme/index'
 
   get 'picture/index'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   get 'bloglist/index'
 
   get 'login/login'
+  post 'login/login', :to => 'login#create'
 
   #get 'blog/index'
 

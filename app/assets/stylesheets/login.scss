@@ -1,3 +1,54 @@
 // Place all the styles related to the login controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#login {
+	width: 300px;
+	height: 120px;
+	margin: 0 auto;
+	background: #eee;
+	font-family: Georgia, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	color:#333;
+}
+
+#login-title {
+	width:100%;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#login-box {
+	width:240px;
+	height:30px;
+	margin-left: 30px;
+}
+
+.login-box-title {
+	width: 60px;
+	height: 15px;
+	font-size: 14px;
+	line-height: 15px;
+	margin-top:7px;
+	text-align: center;
+	float: left;
+}
+
+.login-box-field {
+	width: 160px;
+	height: 15px;
+	font-size: 14px;
+	line-height: 15px;
+	float: left;
+}
+
+#login-box-submit {
+	width: 60px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	margin-left: 90px;
+	text-align: center;
+}
