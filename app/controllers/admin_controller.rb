@@ -1,5 +1,8 @@
 class AdminController < ApplicationController
+  before_action :request_login
+  
   def admin
+    @blog = Blog.new
   end
   
   def logout

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'admin/admin'
+  get 'admin/logout'
 
   get 'aboutme/index'
 

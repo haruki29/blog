@@ -1,4 +1,15 @@
-<h1>Admin#admin</h1>
-<p>Find me in app/views/admin/admin.html.erb</p>
+<div id='title-field'>
+	
+</div>
+<div id='container'>
+<div class='wmd-panel'>
+  	<div id='wmd-button-bar'></div>
+  	<textarea class='wmd-input'></textarea>
+</div>
+</div>
 
-这个页面将会做成一个单页面应用
+<script>
+var converter = Markdown.getSanitizingConverter();
+var editor = new Markdown.Editor(converter);
+editor.run();
+</script>
