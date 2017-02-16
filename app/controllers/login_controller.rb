@@ -2,7 +2,7 @@ class LoginController < ApplicationController
   def login
     @user = User.find_by_id(session[:current_user_id])
     if @user != nil 
-      redirect_to admin_admin_url
+      redirect_to admin_new_url
     end
     
     @user = User.new
@@ -42,6 +42,6 @@ class LoginController < ApplicationController
     session[:current_user_id] = @user.id
     session[:current_user_name] = @user.name
     
-    redirect_to admin_admin_url
+    redirect_to admin_new_url
   end
 end

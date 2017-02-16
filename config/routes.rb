@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'admin/admin'
-  get 'admin/logout'
+  get 'admin/new'
+  post 'admin/logout', :to => 'admin#logout'
+  post 'admin/create', :to => 'admin#create'
 
   get 'aboutme/index'
 

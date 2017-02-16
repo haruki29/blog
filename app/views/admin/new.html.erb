@@ -1,0 +1,13 @@
+<div id='container'>
+<div class='wmd-panel'>
+  	<div id='wmd-button-bar'></div>
+  	<textarea class='wmd-input' name='content'></textarea>
+</div>
+</div>
+
+
+<script>
+var converter = Markdown.getSanitizingConverter();
+var editor = new Markdown.Editor(converter);
+editor.run();
+</script>
