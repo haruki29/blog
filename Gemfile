@@ -37,8 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 # markdown 
 gem 'markdown-rails'
-gem 'redcarpet', '~> 3.3.3'
-gem 'rouge', '~> 1.10.1'
+gem 'redcarpet'
+gem 'pygments.rb'
 
 # page down
 gem 'pagedown-rails', '~> 1.1.4'

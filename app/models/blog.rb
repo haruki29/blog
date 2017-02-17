@@ -9,6 +9,6 @@ class Blog < ApplicationRecord
   end
   
   def blog_content
-    
+    self.content
   end
 end
