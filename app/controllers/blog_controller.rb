@@ -25,6 +25,7 @@ class BlogController < ApplicationController
   end
   
   
+  private
   def markdown(text)
     renderer = HTMLwithPygments.new({
           :filter_html => true,
