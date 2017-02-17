@@ -26,7 +26,16 @@ class AdminController < ApplicationController
     
     @blog.title = @title
     @blog.content = @content
-    @blog.save
+    #@blog.save
+    
+    month_blog = MonthBlog.find_by_blog_date(@blog.blog_date)
+    if month_blog == nil 
+      month_blog = MonthBlog.new
+    end 
+    
+    month_blog.blogs << @blog
+    
+    month_blog.save
     
     redirect_to root_url
   end

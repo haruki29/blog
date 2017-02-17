@@ -1,5 +1,8 @@
 <%= render :partial => 'layouts/blog_header'%>
-<div id='content'>
-	<h1>Bloglist#index</h1>
-	<p>Find me in app/views/bloglist/index.html.erb</p>
+<div id="content">
+	<ul>
+		<% @blogs.each do |blog|%>
+			<li class='blog-li'><%= blog.blog_time%> <%= link_to blog.blog_title, blog_show_path(blog)%></li>
+		<% end %>
+	</ul>
 </div>

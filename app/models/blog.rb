@@ -1,4 +1,5 @@
 class Blog < ApplicationRecord
+  belongs_to :month_blog
   
   def blog_title
     "《" + self.title + "》"
@@ -10,5 +11,9 @@ class Blog < ApplicationRecord
   
   def blog_content
     self.content
+  end
+  
+  def blog_date
+    self.created_at.to_s[0..10]
   end
 end
