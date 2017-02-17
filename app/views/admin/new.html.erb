@@ -1,9 +1,18 @@
+<% if flash[:notice] %>
+	<%= render :partial => 'layouts/flash_notice'%>
+<% end %>
 <div id='container'>
-<div class='wmd-panel'>
-  	<div id='wmd-button-bar'></div>
-  	<textarea class='wmd-input' name='content'></textarea>
-</div>
-</div>
+	<form action='/admin/create' method='post'>
+		<input type='text' name='title' placeholder='标题'></input>
+		<div class='wmd-panel'>
+	  		<div id='wmd-button-bar'></div>
+	  		<textarea class='wmd-input' name='content'></textarea>
+		</div>
+		</div>
+		<input type='submit' value='发表'>
+	</form>
+<div>
+
 
 
 <script>

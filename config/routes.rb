@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'login/login'
   post 'login/login', :to => 'login#create'
+  
+  get 'blog/show/:id', :to => 'blog#show', as: 'blog_show'
 
   #get 'blog/index'
 

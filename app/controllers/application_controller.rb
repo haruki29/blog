@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :blog_config
   
   private
   
@@ -14,6 +15,10 @@ class ApplicationController < ActionController::Base
       
       redirect_to login_login_url
     end
+  end
+  
+  def blog_config 
+    @title = Rails.application.config.blog['site']['title']
   end
   
 end
