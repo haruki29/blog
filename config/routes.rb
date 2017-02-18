@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'newswall/index'
+
   get 'admin/new'
   post 'admin/logout', :to => 'admin#logout'
   post 'admin/create', :to => 'admin#create'

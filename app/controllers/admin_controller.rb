@@ -22,20 +22,17 @@ class AdminController < ApplicationController
       return
     end
     
-    @blog = Blog.new
+    blog_date = Time.now.to_s[0..6]
     
-    @blog.title = @title
-    @blog.content = @content
-    #@blog.save
+    @month_blog = MonthBlog.find_by_blog_date(blog_date)
+    if @month_blog == nil
+      @month_blog = MonthBlog.new
+      @month_blog.blog_date = blog_date
+      @month_blog.title = blog_date
+    end
     
-    month_blog = MonthBlog.find_by_blog_date(@blog.blog_date)
-    if month_blog == nil 
-      month_blog = MonthBlog.new
-    end 
-    
-    month_blog.blogs << @blog
-    
-    month_blog.save
+    @blog = @month_blog.blogs.build(:title => @title, :content => @content)
+    @blog.save
     
     redirect_to root_url
   end

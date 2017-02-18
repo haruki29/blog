@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217121041) do
+ActiveRecord::Schema.define(version: 20170218095924) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "month_blog_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "nickname"
+    t.string   "email"
+    t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "news_id"
   end
 
   create_table "month_blogs", force: :cascade do |t|
@@ -24,6 +34,15 @@ ActiveRecord::Schema.define(version: 20170217121041) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "blog_date"
+    t.integer  "blog_id"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string   "title"
+    t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "comment_id"
   end
 
   create_table "users", force: :cascade do |t|
