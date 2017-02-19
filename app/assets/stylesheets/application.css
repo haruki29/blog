@@ -16,7 +16,7 @@
  */
 
 #title {
-	font-size: 42px;
+	font-size: 37px;
 	text-align: center;
 	width: 100%;
 	height: 100px;
@@ -43,6 +43,10 @@
 	color:#333;
 }
 
+#content li {
+	font-family: Georgia, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+}
+
 #footer {
 	width: 100%;
 	height: 30px;
@@ -63,5 +67,6 @@
 	color:red;
 	font-size: 13px;
 }
+
 
 

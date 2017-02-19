@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'weibo/index'
+
   get 'newswall/index'
 
   get 'admin/new'

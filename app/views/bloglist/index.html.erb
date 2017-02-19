@@ -1,16 +1,13 @@
 <%= render :partial => 'layouts/blog_header'%>
 <div id="content">
-	<ul>
-		<% @month_blogs.each do |month_blog| %>
-			<div class='month-blog-title'>
-				<%= month_blog.title%>
-			</div>
-			
-			<ul>
-				<% month_blog.blogs.each do |blog|%>
-					<li class='blog-li'><%= blog.blog_time%> <%= link_to blog.blog_title, blog_show_path(blog)%></li>
-				<% end %>
-			</ul>
-		<% end %>
-	</ul>
+	<% @month_blogs.each do |month_blog| %>
+		<div class='month-blog-title'>
+			<%= month_blog.title%>
+		</div>
+		<ul>
+			<% month_blog.blogs.each do |blog|%>
+				<li class='blog-li'><%= blog.blog_time%> <%= link_to blog.blog_title, blog_show_path(blog)%></li>
+			<% end %>
+		</ul>
+	<% end %>
 </div>
