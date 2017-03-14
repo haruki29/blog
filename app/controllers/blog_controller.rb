@@ -14,8 +14,6 @@ class BlogController < ApplicationController
     end
   
   def index
-    @title = Rails.application.config.blog['site']['title']
-    
     @blogs = Blog.all
   end
   
